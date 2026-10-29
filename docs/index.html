@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facility-MCP-Demo</title>
+<meta name="description" content="Ein MCP-Server, der interne Systeme eines Gebäudedienstleisters rollenbasiert und nachvollziehbar für KI öffnet. Alle Daten sind erfunden.">
+<style>
+  :root {
+    --teal-900:#04342C; --teal-800:#085041; --teal-600:#0F6E56; --teal-50:#E1F5EE; --teal-200:#5DCAA5;
+    --amber-50:#FAEEDA; --amber-800:#633806;
+    --bg:#F8F7F4; --card:#FFFFFF; --text:#2C2C2A; --muted:#5F5E5A; --line:#D3D1C7; --code:#F1EFE8;
+    --deny:#8A2C1F; --deny-bg:#FBEAE6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#141413; --card:#1D1D1B; --text:#E8E6DF; --muted:#A9A79F; --line:#3A3935; --code:#262623;
+      --teal-900:#9FE1CB; --teal-800:#7FD6B8; --teal-600:#5DCAA5; --teal-50:#12302A;
+      --amber-50:#33260F; --amber-800:#F0C98A; --deny:#F2A596; --deny-bg:#3A1F1A;
+    }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:1.9rem; margin:0 0 6px; color:var(--teal-900); letter-spacing:-.01em; }
+  h2 { font-size:1.15rem; margin:44px 0 12px; color:var(--teal-800); }
+  p { margin:0 0 12px; }
+  .lead { color:var(--muted); font-size:1.05rem; max-width:62ch; }
+  .note { background:var(--amber-50); color:var(--amber-800); border-radius:6px; padding:10px 14px; font-size:.92rem; margin:20px 0; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 0; padding:0; list-style:none; }
+  .chips li { background:var(--teal-50); color:var(--teal-800); border-radius:4px; padding:4px 10px; font-size:.88rem; font-weight:500; }
+  .scenario { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:18px 18px 8px; margin-bottom:18px; }
+  .scenario h3 { margin:0 0 4px; font-size:1.05rem; }
+  .frage { color:var(--muted); margin:0 0 14px; font-style:italic; }
+  .step { border-top:1px solid var(--line); padding:12px 0; }
+  .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-bottom:8px; font-size:.88rem; }
+  .badge { background:var(--code); border-radius:4px; padding:2px 8px; color:var(--muted); }
+  .badge.deny { background:var(--deny-bg); color:var(--deny); font-weight:600; }
+  .badge.ok { background:var(--teal-50); color:var(--teal-800); font-weight:600; }
+  code, pre { font:13px/1.5 ui-monospace,"Cascadia Code","SFMono-Regular",Consolas,monospace; }
+  .call { font-weight:600; }
+  pre { background:var(--code); border-radius:6px; padding:12px; overflow-x:auto; margin:8px 0 0; max-height:340px; white-space:pre-wrap; word-break:break-word; }
+  details summary { cursor:pointer; color:var(--teal-800); font-size:.9rem; margin-top:6px; }
+  .expect { color:var(--muted); font-size:.92rem; padding:10px 0 12px; border-top:1px solid var(--line); }
+  table { width:100%; border-collapse:collapse; font-size:.86rem; background:var(--card); border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { background:var(--code); color:var(--muted); font-weight:600; }
+  td.mono { font:12.5px ui-monospace,Consolas,monospace; white-space:nowrap; }
+  .scroll { overflow-x:auto; }
+  footer { margin-top:48px; color:var(--muted); font-size:.9rem; }
+  a { color:var(--teal-600); }
+  a:focus-visible, summary:focus-visible { outline:2px solid var(--teal-600); outline-offset:2px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Facility-MCP-Demo</h1>
+  <p class="lead">Ein MCP-Server, der interne Systeme eines Gebäudedienstleisters für KI-Assistenten öffnet: lesend, nach Rolle begrenzt und mit Protokoll jeder Anfrage.</p>
+  <ul class="chips">
+    <li>Nur lesende Werkzeuge</li>
+    <li>Rolle aus der Konfiguration, nicht vom Modell</li>
+    <li>Audit-Log mit Ablehnungen</li>
+    <li>Freitext gilt als Fremddaten</li>
+  </ul>
+  <p class="note"><strong>Was Sie hier sehen:</strong> Antworten, die der echte Server bei vier Szenarien geliefert hat (Skript <code>scripts/record_demo.py</code>). Alle Daten sind erfunden, es gibt keine Personendaten. Antworten eines Sprachmodells sind nicht Teil dieser Aufzeichnung, die Seite zeigt die Server-Seite.</p>
+
+  <h2>Vier Szenarien</h2>
+  <div id="scenarios"></div>
+
+  <h2>Audit-Log dieser Aufzeichnung</h2>
+  <div class="scroll"><table id="audit"></table></div>
+
+  <footer>
+    <p id="repo"></p>
+    <p>Gebaut mit dem offiziellen MCP-Python-SDK. Entstanden als Praxisbeispiel zur Bewerbung von René Rößger.</p>
+  </footer>
+</main>
+<script src="demo-data.js"></script>
+<script>
+(function () {
+  var D = window.DEMO || { szenarien: [], audit: [] };
+  var host = document.getElementById("scenarios");
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined) n.textContent = text;
+    return n;
+  }
+  function pretty(v) { return typeof v === "string" ? v : JSON.stringify(v, null, 2); }
+
+  D.szenarien.forEach(function (s) {
+    var box = el("section", "scenario");
+    box.appendChild(el("h3", "", s.titel));
+    box.appendChild(el("p", "frage", "Anlass: " + s.frage));
+    s.schritte.forEach(function (st) {
+      var step = el("div", "step");
+      var meta = el("div", "meta");
+      meta.appendChild(el("span", "badge", "Rolle: " + st.rolle + (st.niederlassung ? " (" + st.niederlassung + ")" : "")));
+      meta.appendChild(el("span", "badge " + (st.fehler ? "deny" : "ok"), st.fehler ? "abgelehnt" : "erlaubt"));
+      step.appendChild(meta);
+      var args = Object.keys(st.parameter).length ? JSON.stringify(st.parameter) : "";
+      step.appendChild(el("code", "call", st.werkzeug + "(" + args + ")"));
+      var out = pretty(st.antwort);
+      if (out.length > 420) {
+        var d = el("details");
+        d.appendChild(el("summary", "", "Antwort des Servers anzeigen"));
+        d.appendChild(el("pre", "", out));
+        step.appendChild(d);
+      } else {
+        step.appendChild(el("pre", "", out));
+      }
+      box.appendChild(step);
+    });
+    box.appendChild(el("p", "expect", s.erwartung));
+    host.appendChild(box);
+  });
+
+  var t = document.getElementById("audit");
+  var head = el("tr");
+  ["Zeit (UTC)", "Rolle", "Werkzeug", "Entscheidung", "Hinweis"].forEach(function (h) { head.appendChild(el("th", "", h)); });
+  t.appendChild(head);
+  D.audit.forEach(function (a) {
+    var r = el("tr");
+    r.appendChild(el("td", "mono", a.ts.replace("T", " ").replace("+00:00", "")));
+    r.appendChild(el("td", "", a.role + (a.branch ? " / " + a.branch : "")));
+    r.appendChild(el("td", "mono", a.tool));
+    r.appendChild(el("td", "", a.decision === "deny" ? "abgelehnt" : "erlaubt"));
+    r.appendChild(el("td", "", a.reason || a.event || (a.results != null ? a.results + " Treffer" : "")));
+    t.appendChild(r);
+  });
+
+  var m = location.hostname.match(/^([^.]+)\.github\.io$/);
+  var repo = document.getElementById("repo");
+  if (m) {
+    var name = location.pathname.split("/").filter(Boolean)[0];
+    if (name) {
+      var a = el("a", "", "Quellcode und Tests auf GitHub");
+      a.href = "https://github.com/" + m[1] + "/" + name;
+      repo.appendChild(a);
+    }
+  }
+})();
+</script>
+</body>
+</html>

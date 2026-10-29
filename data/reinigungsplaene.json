@@ -1,0 +1,314 @@
+[
+  {
+    "objekt_id": "O-1001",
+    "leistungen": [
+      {
+        "leistung": "Hallenboden maschinell reinigen",
+        "intervall": "täglich",
+        "bereich": "Produktion",
+        "dauer_min": 180
+      },
+      {
+        "leistung": "Sozialräume und Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sozialtrakt",
+        "dauer_min": 90
+      },
+      {
+        "leistung": "Glasflächen Büro",
+        "intervall": "monatlich",
+        "bereich": "Verwaltung",
+        "dauer_min": 120
+      },
+      {
+        "leistung": "Grundreinigung Boden",
+        "intervall": "halbjährlich",
+        "bereich": "Produktion",
+        "dauer_min": 480
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1002",
+    "leistungen": [
+      {
+        "leistung": "Büroflächen Unterhaltsreinigung",
+        "intervall": "täglich",
+        "bereich": "Büros",
+        "dauer_min": 120
+      },
+      {
+        "leistung": "Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sanitärräume",
+        "dauer_min": 60
+      },
+      {
+        "leistung": "Fensterreinigung",
+        "intervall": "vierteljährlich",
+        "bereich": "Fassade innen und außen",
+        "dauer_min": 240
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1003",
+    "leistungen": [
+      {
+        "leistung": "Klassenräume",
+        "intervall": "täglich",
+        "bereich": "Unterrichtsräume",
+        "dauer_min": 150
+      },
+      {
+        "leistung": "Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sanitärräume",
+        "dauer_min": 75
+      },
+      {
+        "leistung": "Turnhalle",
+        "intervall": "wöchentlich",
+        "bereich": "Sporthalle",
+        "dauer_min": 90
+      },
+      {
+        "leistung": "Grundreinigung in den Ferien",
+        "intervall": "halbjährlich",
+        "bereich": "Gesamtobjekt",
+        "dauer_min": 600
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1004",
+    "leistungen": [
+      {
+        "leistung": "Flächendesinfektion Stationen",
+        "intervall": "täglich",
+        "bereich": "Stationen",
+        "dauer_min": 240
+      },
+      {
+        "leistung": "Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sanitärräume",
+        "dauer_min": 120
+      },
+      {
+        "leistung": "Flure und Aufzüge",
+        "intervall": "täglich",
+        "bereich": "Verkehrsflächen",
+        "dauer_min": 90
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1005",
+    "leistungen": [
+      {
+        "leistung": "Hallenboden maschinell reinigen",
+        "intervall": "täglich",
+        "bereich": "Produktion",
+        "dauer_min": 180
+      },
+      {
+        "leistung": "Sozialräume und Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sozialtrakt",
+        "dauer_min": 90
+      },
+      {
+        "leistung": "Glasflächen Büro",
+        "intervall": "monatlich",
+        "bereich": "Verwaltung",
+        "dauer_min": 120
+      },
+      {
+        "leistung": "Grundreinigung Boden",
+        "intervall": "halbjährlich",
+        "bereich": "Produktion",
+        "dauer_min": 480
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1006",
+    "leistungen": [
+      {
+        "leistung": "Büroflächen Unterhaltsreinigung",
+        "intervall": "täglich",
+        "bereich": "Büros",
+        "dauer_min": 120
+      },
+      {
+        "leistung": "Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sanitärräume",
+        "dauer_min": 60
+      },
+      {
+        "leistung": "Fensterreinigung",
+        "intervall": "vierteljährlich",
+        "bereich": "Fassade innen und außen",
+        "dauer_min": 240
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1007",
+    "leistungen": [
+      {
+        "leistung": "Klassenräume",
+        "intervall": "täglich",
+        "bereich": "Unterrichtsräume",
+        "dauer_min": 150
+      },
+      {
+        "leistung": "Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sanitärräume",
+        "dauer_min": 75
+      },
+      {
+        "leistung": "Turnhalle",
+        "intervall": "wöchentlich",
+        "bereich": "Sporthalle",
+        "dauer_min": 90
+      },
+      {
+        "leistung": "Grundreinigung in den Ferien",
+        "intervall": "halbjährlich",
+        "bereich": "Gesamtobjekt",
+        "dauer_min": 600
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1008",
+    "leistungen": [
+      {
+        "leistung": "Verkaufsfläche",
+        "intervall": "täglich",
+        "bereich": "Verkaufsraum",
+        "dauer_min": 90
+      },
+      {
+        "leistung": "Schaufenster",
+        "intervall": "wöchentlich",
+        "bereich": "Fassade",
+        "dauer_min": 45
+      },
+      {
+        "leistung": "Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sanitärräume",
+        "dauer_min": 40
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1009",
+    "leistungen": [
+      {
+        "leistung": "Hallenboden maschinell reinigen",
+        "intervall": "täglich",
+        "bereich": "Produktion",
+        "dauer_min": 180
+      },
+      {
+        "leistung": "Sozialräume und Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sozialtrakt",
+        "dauer_min": 90
+      },
+      {
+        "leistung": "Glasflächen Büro",
+        "intervall": "monatlich",
+        "bereich": "Verwaltung",
+        "dauer_min": 120
+      },
+      {
+        "leistung": "Grundreinigung Boden",
+        "intervall": "halbjährlich",
+        "bereich": "Produktion",
+        "dauer_min": 480
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1010",
+    "leistungen": [
+      {
+        "leistung": "Büroflächen Unterhaltsreinigung",
+        "intervall": "täglich",
+        "bereich": "Büros",
+        "dauer_min": 120
+      },
+      {
+        "leistung": "Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sanitärräume",
+        "dauer_min": 60
+      },
+      {
+        "leistung": "Fensterreinigung",
+        "intervall": "vierteljährlich",
+        "bereich": "Fassade innen und außen",
+        "dauer_min": 240
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1011",
+    "leistungen": [
+      {
+        "leistung": "Verkaufsfläche",
+        "intervall": "täglich",
+        "bereich": "Verkaufsraum",
+        "dauer_min": 90
+      },
+      {
+        "leistung": "Schaufenster",
+        "intervall": "wöchentlich",
+        "bereich": "Fassade",
+        "dauer_min": 45
+      },
+      {
+        "leistung": "Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sanitärräume",
+        "dauer_min": 40
+      }
+    ]
+  },
+  {
+    "objekt_id": "O-1012",
+    "leistungen": [
+      {
+        "leistung": "Klassenräume",
+        "intervall": "täglich",
+        "bereich": "Unterrichtsräume",
+        "dauer_min": 150
+      },
+      {
+        "leistung": "Sanitär",
+        "intervall": "täglich",
+        "bereich": "Sanitärräume",
+        "dauer_min": 75
+      },
+      {
+        "leistung": "Turnhalle",
+        "intervall": "wöchentlich",
+        "bereich": "Sporthalle",
+        "dauer_min": 90
+      },
+      {
+        "leistung": "Grundreinigung in den Ferien",
+        "intervall": "halbjährlich",
+        "bereich": "Gesamtobjekt",
+        "dauer_min": 600
+      }
+    ]
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "niederlassung": "Chemnitz",
+    "artikel": "Glasreiniger 5 l",
+    "einheit": "Kanister",
+    "bestand": 37,
+    "mindestbestand": 25
+  },
+  {
+    "niederlassung": "Chemnitz",
+    "artikel": "Sanitärreiniger 5 l",
+    "einheit": "Kanister",
+    "bestand": 46,
+    "mindestbestand": 30
+  },
+  {
+    "niederlassung": "Chemnitz",
+    "artikel": "Desinfektionsmittel 5 l",
+    "einheit": "Kanister",
+    "bestand": 19,
+    "mindestbestand": 20
+  },
+  {
+    "niederlassung": "Chemnitz",
+    "artikel": "Mopp Microfaser",
+    "einheit": "Stück",
+    "bestand": 136,
+    "mindestbestand": 80
+  },
+  {
+    "niederlassung": "Chemnitz",
+    "artikel": "Müllsäcke 120 l",
+    "einheit": "Rolle",
+    "bestand": 64,
+    "mindestbestand": 60
+  },
+  {
+    "niederlassung": "Chemnitz",
+    "artikel": "Handschuhe Nitril M",
+    "einheit": "Packung",
+    "bestand": 68,
+    "mindestbestand": 50
+  },
+  {
+    "niederlassung": "Zwickau",
+    "artikel": "Glasreiniger 5 l",
+    "einheit": "Kanister",
+    "bestand": 56,
+    "mindestbestand": 25
+  },
+  {
+    "niederlassung": "Zwickau",
+    "artikel": "Sanitärreiniger 5 l",
+    "einheit": "Kanister",
+    "bestand": 32,
+    "mindestbestand": 30
+  },
+  {
+    "niederlassung": "Zwickau",
+    "artikel": "Desinfektionsmittel 5 l",
+    "einheit": "Kanister",
+    "bestand": 19,
+    "mindestbestand": 20
+  },
+  {
+    "niederlassung": "Zwickau",
+    "artikel": "Mopp Microfaser",
+    "einheit": "Stück",
+    "bestand": 85,
+    "mindestbestand": 80
+  },
+  {
+    "niederlassung": "Zwickau",
+    "artikel": "Müllsäcke 120 l",
+    "einheit": "Rolle",
+    "bestand": 61,
+    "mindestbestand": 60
+  },
+  {
+    "niederlassung": "Zwickau",
+    "artikel": "Handschuhe Nitril M",
+    "einheit": "Packung",
+    "bestand": 59,
+    "mindestbestand": 50
+  },
+  {
+    "niederlassung": "Leipzig",
+    "artikel": "Glasreiniger 5 l",
+    "einheit": "Kanister",
+    "bestand": 9,
+    "mindestbestand": 25
+  },
+  {
+    "niederlassung": "Leipzig",
+    "artikel": "Sanitärreiniger 5 l",
+    "einheit": "Kanister",
+    "bestand": 23,
+    "mindestbestand": 30
+  },
+  {
+    "niederlassung": "Leipzig",
+    "artikel": "Desinfektionsmittel 5 l",
+    "einheit": "Kanister",
+    "bestand": 48,
+    "mindestbestand": 20
+  },
+  {
+    "niederlassung": "Leipzig",
+    "artikel": "Mopp Microfaser",
+    "einheit": "Stück",
+    "bestand": 107,
+    "mindestbestand": 80
+  },
+  {
+    "niederlassung": "Leipzig",
+    "artikel": "Müllsäcke 120 l",
+    "einheit": "Rolle",
+    "bestand": 96,
+    "mindestbestand": 60
+  },
+  {
+    "niederlassung": "Leipzig",
+    "artikel": "Handschuhe Nitril M",
+    "einheit": "Packung",
+    "bestand": 57,
+    "mindestbestand": 50
+  }
+]

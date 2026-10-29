@@ -1,0 +1,110 @@
+[
+  {
+    "id": "O-1001",
+    "name": "Montagewerk Nord",
+    "stadt": "Chemnitz",
+    "niederlassung": "Chemnitz",
+    "kundentyp": "Industrie",
+    "flaeche_m2": 18400,
+    "schichtmodell": "Dreischicht"
+  },
+  {
+    "id": "O-1002",
+    "name": "Verwaltungszentrum Am Park",
+    "stadt": "Chemnitz",
+    "niederlassung": "Chemnitz",
+    "kundentyp": "Verwaltung",
+    "flaeche_m2": 6200,
+    "schichtmodell": "Früh"
+  },
+  {
+    "id": "O-1003",
+    "name": "Gymnasium Ostring",
+    "stadt": "Chemnitz",
+    "niederlassung": "Chemnitz",
+    "kundentyp": "Schule",
+    "flaeche_m2": 9100,
+    "schichtmodell": "Spät"
+  },
+  {
+    "id": "O-1004",
+    "name": "Klinikum Süd, Haus B",
+    "stadt": "Chemnitz",
+    "niederlassung": "Chemnitz",
+    "kundentyp": "Klinik",
+    "flaeche_m2": 12500,
+    "schichtmodell": "Früh und Spät"
+  },
+  {
+    "id": "O-1005",
+    "name": "Logistikhalle Westpark",
+    "stadt": "Zwickau",
+    "niederlassung": "Zwickau",
+    "kundentyp": "Industrie",
+    "flaeche_m2": 22000,
+    "schichtmodell": "Zweischicht"
+  },
+  {
+    "id": "O-1006",
+    "name": "Rathaus Altstadt",
+    "stadt": "Zwickau",
+    "niederlassung": "Zwickau",
+    "kundentyp": "Verwaltung",
+    "flaeche_m2": 3800,
+    "schichtmodell": "Früh"
+  },
+  {
+    "id": "O-1007",
+    "name": "Grundschule Am Bach",
+    "stadt": "Zwickau",
+    "niederlassung": "Zwickau",
+    "kundentyp": "Schule",
+    "flaeche_m2": 4700,
+    "schichtmodell": "Spät"
+  },
+  {
+    "id": "O-1008",
+    "name": "Autohaus Mitte",
+    "stadt": "Zwickau",
+    "niederlassung": "Zwickau",
+    "kundentyp": "Handel",
+    "flaeche_m2": 2900,
+    "schichtmodell": "Spät"
+  },
+  {
+    "id": "O-1009",
+    "name": "Fertigung Werk 2",
+    "stadt": "Leipzig",
+    "niederlassung": "Leipzig",
+    "kundentyp": "Industrie",
+    "flaeche_m2": 31000,
+    "schichtmodell": "Dreischicht"
+  },
+  {
+    "id": "O-1010",
+    "name": "Bürocampus Nordring",
+    "stadt": "Leipzig",
+    "niederlassung": "Leipzig",
+    "kundentyp": "Verwaltung",
+    "flaeche_m2": 8800,
+    "schichtmodell": "Früh"
+  },
+  {
+    "id": "O-1011",
+    "name": "Einkaufszentrum Stern",
+    "stadt": "Leipzig",
+    "niederlassung": "Leipzig",
+    "kundentyp": "Handel",
+    "flaeche_m2": 15200,
+    "schichtmodell": "Früh und Spät"
+  },
+  {
+    "id": "O-1012",
+    "name": "Berufsschulzentrum",
+    "stadt": "Leipzig",
+    "niederlassung": "Leipzig",
+    "kundentyp": "Schule",
+    "flaeche_m2": 10300,
+    "schichtmodell": "Spät"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "facility-demo": {
+      "command": "python",
+      "args": ["-m", "facility_mcp.server"],
+      "env": {
+        "FACILITY_ROLE": "qualitaetssicherung",
+        "FACILITY_BRANCH": "Chemnitz",
+        "FACILITY_AUDIT_LOG": "C:\\Pfad\\zum\\Repo\\logs\\audit.jsonl"
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 330" role="img" aria-labelledby="t d" font-family="system-ui,Segoe UI,Arial,sans-serif">
+  <title id="t">Architektur der Facility-MCP-Demo</title>
+  <desc id="d">Ein KI-Client ruft über MCP den Server auf. Im Server prüfen Policy, Guard und Audit-Log jede Anfrage, bevor Daten aus den Quellsystemen gelesen werden.</desc>
+  <rect width="880" height="330" fill="#FFFFFF"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#085041"/></marker></defs>
+
+  <rect x="20" y="70" width="190" height="150" rx="6" fill="#F1EFE8" stroke="#D3D1C7"/>
+  <text x="115" y="98" text-anchor="middle" font-size="15" font-weight="600" fill="#1C1C1A">KI-Client</text>
+  <text x="115" y="124" text-anchor="middle" font-size="13" fill="#444441">Claude Desktop</text>
+  <text x="115" y="146" text-anchor="middle" font-size="13" fill="#444441">oder lokales Modell</text>
+  <text x="115" y="166" text-anchor="middle" font-size="13" fill="#444441">(Qwen über Ollama)</text>
+  <text x="115" y="196" text-anchor="middle" font-size="12" fill="#5F5E5A">kennt nur Werkzeuge</text>
+
+  <line x1="210" y1="145" x2="262" y2="145" stroke="#085041" stroke-width="2" marker-end="url(#a)"/>
+  <text x="236" y="132" text-anchor="middle" font-size="12" fill="#085041">MCP</text>
+
+  <rect x="270" y="20" width="400" height="290" rx="6" fill="#E1F5EE" stroke="#0F6E56"/>
+  <text x="470" y="46" text-anchor="middle" font-size="15" font-weight="600" fill="#04342C">MCP-Server (Python)</text>
+
+  <rect x="290" y="62" width="360" height="62" rx="4" fill="#FFFFFF" stroke="#5DCAA5"/>
+  <text x="305" y="84" font-size="14" font-weight="600" fill="#085041">1  Policy</text>
+  <text x="305" y="106" font-size="12.5" fill="#444441">Rolle und Niederlassung aus der Konfiguration, fail closed</text>
+
+  <rect x="290" y="134" width="360" height="62" rx="4" fill="#FFFFFF" stroke="#5DCAA5"/>
+  <text x="305" y="156" font-size="14" font-weight="600" fill="#085041">2  Werkzeuge (nur lesend) und Eingabeprüfung</text>
+  <text x="305" y="178" font-size="12.5" fill="#444441">6 Werkzeuge, Muster für IDs, Treffer begrenzt</text>
+
+  <rect x="290" y="206" width="172" height="86" rx="4" fill="#FFFFFF" stroke="#5DCAA5"/>
+  <text x="305" y="228" font-size="14" font-weight="600" fill="#085041">3  Guard</text>
+  <text x="305" y="248" font-size="12.5" fill="#444441">Freitext prüfen,</text>
+  <text x="305" y="266" font-size="12.5" fill="#444441">Links und Mails</text>
+  <text x="305" y="284" font-size="12.5" fill="#444441">entfernen</text>
+
+  <rect x="478" y="206" width="172" height="86" rx="4" fill="#FFFFFF" stroke="#5DCAA5"/>
+  <text x="493" y="228" font-size="14" font-weight="600" fill="#085041">4  Audit-Log</text>
+  <text x="493" y="248" font-size="12.5" fill="#444441">jede Anfrage, auch</text>
+  <text x="493" y="266" font-size="12.5" fill="#444441">Ablehnungen, ohne</text>
+  <text x="493" y="284" font-size="12.5" fill="#444441">Ergebnisinhalte</text>
+
+  <line x1="670" y1="145" x2="722" y2="145" stroke="#085041" stroke-width="2" marker-end="url(#a)"/>
+  <text x="696" y="132" text-anchor="middle" font-size="12" fill="#085041">lesen</text>
+
+  <rect x="730" y="70" width="130" height="150" rx="6" fill="#F1EFE8" stroke="#D3D1C7"/>
+  <text x="795" y="98" text-anchor="middle" font-size="15" font-weight="600" fill="#1C1C1A">Datenquellen</text>
+  <text x="795" y="124" text-anchor="middle" font-size="13" fill="#444441">hier: JSON</text>
+  <text x="795" y="146" text-anchor="middle" font-size="13" fill="#444441">(erfunden)</text>
+  <text x="795" y="176" text-anchor="middle" font-size="12" fill="#5F5E5A">später: ERP,</text>
+  <text x="795" y="194" text-anchor="middle" font-size="12" fill="#5F5E5A">Ticketsystem, DB</text>
+</svg>

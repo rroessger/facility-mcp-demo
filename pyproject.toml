@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "facility-mcp-demo"
+version = "0.1.0"
+description = "Demo: MCP-Server, der fiktive interne Systeme eines Gebäudedienstleisters rollenbasiert, nachvollziehbar und schreibgeschützt für KI-Assistenten öffnet."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["mcp>=2.3,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.24"]
+
+[project.scripts]
+facility-mcp = "facility_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
