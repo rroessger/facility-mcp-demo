@@ -6,7 +6,7 @@ Das ist ein Praxisbeispiel zur Frage: **Wie bindet man interne Systeme an ein Sp
 
 ![Architektur](docs/architektur.svg)
 
-**Ansehen ohne Installation:** `docs/index.html` zeigt aufgezeichnete Antworten des echten Servers (auf GitHub Pages veröffentlichbar, siehe unten).
+**Ansehen ohne Installation:** [rroessger.github.io/facility-mcp-demo](https://rroessger.github.io/facility-mcp-demo/) zeigt aufgezeichnete Antworten des echten Servers (Quelle: `docs/index.html`).
 
 ## Was der Server tut
 
@@ -33,7 +33,7 @@ Rollen im Überblick:
 Voraussetzung: Python 3.11 oder neuer.
 
 ```bash
-git clone <dieses-repo>
+git clone https://github.com/rroessger/facility-mcp-demo.git
 cd facility-mcp-demo
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
